@@ -1,0 +1,11 @@
+constante avanca = documento.consultaSeletorTodos('.btn-próximo');
+
+avanca.para cada(botão => {
+    botão.adicionarEventListener('clique', função(){
+        constante atual = documento.seletor de consulta('.ativo');
+        constante próximoPasso = 'passo-' + esse.obterAtributo('dados-próximos');
+
+        atual.lista de classes.remover('ativo');
+        documento.obterElementoPorId(próximoPasso).lista de classes.adicionar('ativo');
+    })
+})
